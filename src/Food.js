@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Food = (props) => {
+const Food = ({ name }) => {
+  const [tried, setTried] = useState(false);
+
   const onDelete = () => {
     props.deleteFood(props.food);
   };
